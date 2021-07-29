@@ -18,7 +18,7 @@ public class Problem3nPlus1 {
             if(n%2 == 1) n = n*3+1;
             else n = n/2;
             cnt++;
-//            System.out.println(cnt);
+//          System.out.println(cnt);
         }
         return cnt;
     }
