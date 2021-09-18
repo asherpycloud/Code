@@ -5,13 +5,21 @@ import java.util.Scanner;
 public class FunctionCalculator {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        float
+        double x = sc.nextDouble();
+        double y = calculator(x);
+        System.out.println(y);
     }
 
-    static int calculator(int n){
-        float x = n;
-        if(x<1) x=x;
-        else if(1 <= x & x < 10) x= 2*x-1;
-        else x= 3*x-11;
+    static double calculator(double x){
+        double y = 0;
+        if(x<1) y=x;
+        else if(1 <= x & x < 10) y = 2*x-1;
+        else y = 3*x-11;
+        return y;
     }
 }
+
+// read your input
+// write your logic
+// get your output and print your output
+//
