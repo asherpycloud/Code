@@ -1,3 +1,5 @@
+package CCL1.C202107;
+
 import java.util.Scanner;
 
 public class Problem3nPlus1 {
@@ -18,7 +20,7 @@ public class Problem3nPlus1 {
             if(n%2 == 1) n = n*3+1;
             else n = n/2;
             cnt++;
-//          System.out.println(cnt);
+//            System.out.println(cnt);
         }
         return cnt;
     }

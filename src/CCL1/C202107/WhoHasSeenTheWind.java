@@ -1,3 +1,5 @@
+package CCL1.C202107;
+
 import java.util.Scanner;
 
 public class WhoHasSeenTheWind {
@@ -16,3 +18,4 @@ public class WhoHasSeenTheWind {
         System.out.println("The balloon does not touch the ground in the given time.");
     }
 }
+

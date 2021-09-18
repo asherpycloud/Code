@@ -1,3 +1,5 @@
+package CCL1.C202107;
+
 import java.util.Random;
 import java.util.Scanner;
 
