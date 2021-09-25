@@ -2,7 +2,7 @@ package CCL1.C202109;
 
 import java.util.Scanner;
 
-public class CanadianCalorieCounting {
+public class C01CanadianCalorieCounting {
     public static void main(String[] args){
         int total = 0;
 

@@ -2,7 +2,7 @@ package CCL1.C202109;
 
 import java.util.Scanner;
 
-public class WhichAlien {
+public class C01WhichAlien {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("How many antennas?");

@@ -2,7 +2,7 @@ package CCL1.C202109;
 
 import java.util.Scanner;
 
-public class FunctionCalculator {
+public class C01FunctionCalculator {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         double x = sc.nextDouble();
