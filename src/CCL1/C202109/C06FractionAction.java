@@ -15,8 +15,8 @@ public class C06FractionAction {
         if(r>0) {
             for(int i = r; i>1; i--){
                 if(r%i == 0 && d%i == 0) {
-                    r = r/i;
-                    d = d/i;
+                    r/=i;
+                    d/=i;
                     break;
                 }
             }

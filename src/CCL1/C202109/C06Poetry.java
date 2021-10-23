@@ -8,7 +8,7 @@ public class C06Poetry {
         int N = sc.nextInt();
         sc.nextLine();
         for(int i = 0; i<N; i++){
-            String s = null, s2 = null, s3 = null, s4 = null;
+            String[] ss = new String[4];
             for(int j = 0; j<4; j++){
                 //read the input
                 String line = sc.nextLine();
@@ -16,19 +16,16 @@ public class C06Poetry {
                 for(int k = line.length()-1; k>=0; k--){
                     if(line.charAt(k) == 'a' || line.charAt(k) == 'e' || line.charAt(k) == 'i' || line.charAt(k) == 'o' || line.charAt(k) == 'u'){
                         //get the last syllable
-                        if(j == 0) s = line.substring(k+1);
-                        else if(j == 1) s2 = line.substring(k+1);
-                        else if(j == 2) s3 = line.substring(k+1);
-                        else s4 = line.substring(k+1);
+                        ss[j] = line.substring(k+1);
                         break;
                     }
                 }
             }
             //classify rhyme
-            if(s.equals(s2) && s.equals(s3) && s.equals(s4)) System.out.println("perfect");
-            else if(s.equals(s2) && s3.equals(s4)) System.out.println("even");
-            else if(s.equals(s3) && s2.equals(s4)) System.out.println("cross");
-            else if(s.equals(s4) && s2.equals(s3)) System.out.println("shell");
+            if(ss[0].equals(ss[1]) && ss[0].equals(ss[2]) && ss[0].equals(ss[3])) System.out.println("perfect");
+            else if(ss[0].equals(ss[1]) && ss[2].equals(ss[3])) System.out.println("even");
+            else if(ss[0].equals(ss[2]) && ss[1].equals(ss[3])) System.out.println("cross");
+            else if(ss[0].equals(ss[3]) && ss[1].equals(ss[2])) System.out.println("shell");
             else System.out.println("free");
         }
     }
