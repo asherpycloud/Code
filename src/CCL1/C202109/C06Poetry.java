@@ -20,17 +20,16 @@ public class C06Poetry {
                         else if(j == 1) s2 = line.substring(k+1);
                         else if(j == 2) s3 = line.substring(k+1);
                         else s4 = line.substring(k+1);
-//                        System.out.println(line.substring(k+1));
                         break;
                     }
                 }
             }
+            //classify rhyme
             if(s.equals(s2) && s.equals(s3) && s.equals(s4)) System.out.println("perfect");
             else if(s.equals(s2) && s3.equals(s4)) System.out.println("even");
             else if(s.equals(s3) && s2.equals(s4)) System.out.println("cross");
             else if(s.equals(s4) && s2.equals(s3)) System.out.println("shell");
             else System.out.println("free");
-            //classify rhyme
         }
     }
 }
