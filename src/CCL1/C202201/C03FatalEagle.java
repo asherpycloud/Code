@@ -9,7 +9,9 @@ public class C03FatalEagle {
         int[] arr = new int[N];
         for(int i = 0; i<N; i++){
             arr[i] = sc.nextInt();
+            System.out.print(arr[i] + " ");
         }
+        System.out.println();
         for(int e=N-1; e>=1; e--){
             for(int j = 1; j<=e; j++){
                 if(arr[j] < arr[j-1]){
