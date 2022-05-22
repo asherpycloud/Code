@@ -2,7 +2,7 @@ package CCL1.C202201;
 
 import java.util.Scanner;
 
-public class C014WrapAroundCode {
+public class C013WrapAroundCode {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < 5; i++) {
