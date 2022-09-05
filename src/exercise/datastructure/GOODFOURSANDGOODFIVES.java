@@ -9,7 +9,7 @@ public class GOODFOURSANDGOODFIVES {
         int sums = 0;
         if(N % 4 == 0) sums++;
         if(N % 5 == 0) sums++;
-        for(int i = 4; i< N; i+=4){
+        while(N>5){
             N = N - 4;
             if(N % 5 == 0) sums++;
         }
