@@ -1,0 +1,38 @@
+package CCL2.C20220917;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class P3UniqueElements {
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static StringTokenizer st;
+    static String next() throws IOException {
+        while (st == null || !st.hasMoreTokens())
+            st = new StringTokenizer(br.readLine().trim());
+        return st.nextToken();
+    }
+    static int readInt() throws IOException {
+        return Integer.parseInt(next());
+    }
+    public static void main(String[] args)throws IOException{
+        int N = readInt();
+        int shft = readInt();
+        int sum = N;
+        int nShft = N;
+        for(int i = 0; i<shft; i++){
+            nShft = nShft * 10;
+            sum = sum + nShft;
+        }
+        System.out.println(sum);
+    }
+}
+
+/*
+12
+3
+
+ */
+
+//https://dmoj.ca/problem/ccc17j2
