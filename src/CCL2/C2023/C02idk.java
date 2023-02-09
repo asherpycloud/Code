@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class C01BattlePositions {
+public class C02idk {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     static String next() throws IOException {
@@ -17,35 +17,18 @@ public class C01BattlePositions {
         return Integer.parseInt(next());
     }
     public static void main(String[] args) throws IOException{
-        int I = readInt();
-        int[] stations = new int[I];
-        int N = readInt();
-        int J = readInt();
-        int X1, X2, K;
-        for(int i = 0; i <J; i++){
-            X1 = readInt() - 1;
-            X2 = readInt() - 1;
-            K = readInt();
-            for(int j = X1; j<=X2; j++)
-            stations[j]+=K;
+        int n = readInt(), desire[] = new int[n+1], delta[] =  new int[n+2];
+        for(int i =1; i <=n; i++){
+            desire[i] = readInt();
         }
-        int cnt = 0;
-        for(int i = 0 ; i <I; i++){
-            if(stations[i] < N) cnt++;
+        for(int i = 1; i <n; i++){
+            delta[i] = delta[i] - delta[i-1];
         }
-        System.out.println(cnt);
+        int dif[] = new int[n+2], ans = 0;
+        for(int i =1; i<=n+1;i++){
+            dif[i] = delta[i] - delta[i-1];
+            if(dif[i] > 0) ans += dif[i];
+        }
+        System.out.println(ans);
     }
 }
-
-/*
-4
-1
-3
-1 3 1
-2 3 2
-3 3 2
-
- */
-
-
-//https://dmoj.ca/problem/seed3

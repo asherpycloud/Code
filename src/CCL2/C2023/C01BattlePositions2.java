@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class C01BattlePositions {
+public class C01BattlePositions2 {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     static String next() throws IOException {
@@ -16,7 +16,7 @@ public class C01BattlePositions {
     static int readInt() throws IOException {
         return Integer.parseInt(next());
     }
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
         int I = readInt();
         int[] stations = new int[I];
         int N = readInt();
@@ -24,13 +24,15 @@ public class C01BattlePositions {
         int X1, X2, K;
         for(int i = 0; i <J; i++){
             X1 = readInt() - 1;
-            X2 = readInt() - 1;
+            X2 = readInt();
             K = readInt();
-            for(int j = X1; j<=X2; j++)
-            stations[j]+=K;
+            stations[X1]+=K;
+            if(X2<J) stations[X2]-=K;
         }
         int cnt = 0;
-        for(int i = 0 ; i <I; i++){
+        if(stations[0] <N) cnt++;
+        for(int i = 1; i < I; i++){
+            stations[i] = stations[i-1] + stations[i];
             if(stations[i] < N) cnt++;
         }
         System.out.println(cnt);
@@ -43,9 +45,6 @@ public class C01BattlePositions {
 3
 1 3 1
 2 3 2
-3 3 2
+3 4 2
 
  */
-
-
-//https://dmoj.ca/problem/seed3
