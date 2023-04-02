@@ -19,20 +19,14 @@ public class C11Sorting {
     public static void main(String[] args) throws IOException {
         int N = readInt();
         int K = readInt();
-        int[] P = new int[N];
-        for(int i = 0 ;i < N; i++){
-            P[i] = readInt();
-        }
-        boolean yes = false;
-        for(int i = 0 ;i <N; i++){
-            if((P[i] - (i+1)) % K == 0) yes = true;
-            else{
-                yes = false;
-                break;
+        for(int i = 0; i < N; i++){
+            int n = readInt();
+            if((n - (i+1)) % K != 0) {
+                System.out.println("NO");
+                System.exit(0);
             }
         }
-        if(yes == true) System.out.println("YES");
-        else System.out.println("NO");
+        System.out.println("YES");
     }
 }
 
