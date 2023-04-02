@@ -1,13 +1,15 @@
 package CCL2.C2023;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class testcase {
     public static void main(String[] args){
-        int[] hello = {1, 2, 3, 4, 5};
-        int[] b = Arrays.copyOfRange(hello, 0, 1);
-        System.out.println(3/7);
+        ArrayList<Integer> veci = new ArrayList<>();
+        veci.add(2);
+        veci.add(5, 1);
+        System.out.println(veci);
 
     }
 }

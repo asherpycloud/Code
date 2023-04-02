@@ -1,11 +1,11 @@
-package Dingus;
+package CCL2.C2023;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.StringTokenizer;
 
-public class AHashmapTeeHee {
+public class C05NormalProblem {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     static String next() throws IOException {
@@ -17,12 +17,11 @@ public class AHashmapTeeHee {
         return Integer.parseInt(next());
     }
     public static void main(String[] args) throws IOException{
-        String [] words = {"hello", "world", "hello", "hi", "java", "hi", "java", "world", "hello"};
-        Map<String, Integer> map = new HashMap();
-        for(int i = 0; i < words.length; i++){
-            int x = map.getOrDefault(words[i], 0);
-            map.put(words[i], 1+x);
+        String str = br.readLine();
+        if (str.contains("demello")) {
+            System.out.println("liar");
+        } else {
+            System.out.println("what are we going to do?");
         }
-        System.out.println("# of distinct words : " + map.size());
     }
 }
