@@ -20,30 +20,20 @@ public class C13FreeShirst {
     public static void main(String[] args) throws IOException {
         for(int i = 0; i<10; i++) {
             int N = readInt(), M = readInt(), D = readInt();
-            int[] S = new int[D];
-            int[] CS = new int[D];
+            int s = N, cs = N, cnt = 0;
             int[] A = new int[D];
-            for(int j = 0; j<M; j++){
-                A[readInt()-1]++;
-            }
-            int cnt = 0;
+            for(int j = 0; j<M; j++) A[readInt()-1]++;
             for(int j = 0; j<D; j++) { // no event shirt
-                if(A[j] == 0 && CS[j] != 0) {
-                    S[j] = N;
-                    CS[j] = S[j] - 1;
-                } else if(A[j] == 0 && CS[j] == 0){ //no event no shirt
-                    S[j] = N;
-                    CS[j] = N-1;
+                // 6am
+                if (cs == 0) {
                     cnt++;
-                } else if(A[j] !=0 && CS[j] != 0){ //event shirt
-                    N = N++;
-                    S[j] = N;
-                } else if(A[j] !=0 && CS[j] == 0){ //event no shirt
-                    CS[j] = N;
-                    N = N++;
-                    S[j] = N;
-                    cnt++;
+                    cs = s;
                 }
+                // 7am
+                cs--;
+                // 8am: events
+                s += A[j];
+                cs += A[j];
             }
             System.out.println(cnt);
         }
